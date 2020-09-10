@@ -1,0 +1,22 @@
+nav {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: rgba(0,0,0,0.2);
+    span.logo {
+        display: inline;
+    }
+    .nav-links {
+        position: relative;
+        display: inline-block;
+        font-size: 180%;
+        ul {
+            list-style-type:none;
+
+            li {
+                display: inline;
+            }
+        }
+    }
+}
