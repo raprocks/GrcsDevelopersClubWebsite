@@ -3,17 +3,12 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
-        <title>
-            {% if title %}
-                {{ title }} - TheDevsClub
-            {% else %}
-                TheDevsClub
-            {% endif %}
-        </title>
+        <title>{% if title %}{{ title }} - TheDevsClub{% else %}TheDevsClub{% endif %}</title>
         <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css" media="all">
     </head>
     <body>
         {% include 'nav.html' %}
         {% block content %}{% endblock %}
+        {% include 'foot.html' %}
     </body>
 </html>
