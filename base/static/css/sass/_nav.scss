@@ -1,59 +1,142 @@
-nav {
-    min-height: 6vh;
-    display:flex;
-    flex-direction: row;
-    align-items:center;
-    justify-content: space-around;
-    margin:3px;
-    padding-top:1em;
+// nav {
+//     min-height: 6vh;
+//     display:flex;
+//     flex-direction: row;
+//     align-items:center;
+//     justify-content: space-around;
+//     margin:3px;
+//     padding-top:1em;
 
-    .logo {
-        text-transform: uppercase;
-        font-size: 4em;
-        letter-spacing: 3px;
-        color: #EBB41E;
-        background-color: grey;
+//     .logo {
+//         text-transform: uppercase;
+//         font-size: 4em;
+//         letter-spacing: 3px;
+//         color: #EBB41E;
+//         background-color: grey;
+//     }
+//     ul {
+//         display: flex;
+//         width: 50%;
+//         list-style-type: none;
+//         font-size: 2em;
+//         justify-content: space-around;
+//         li {
+//             background-color: springgreen;
+//             justify-content: center;
+//             a{
+//             }
+//         }
+//     }
+//     .hamburger {
+//         display: none;
+//     }
+// }
+
+// @media screen and (max-width:768px) {
+//     nav {
+//         ul{
+//             display: unset;
+//             position: relative;
+//             top: 10vh;
+//         }
+//         .logo {
+//             font-size: 3em;
+//         }
+//         .hamburger {
+//             display: flex;
+//             flex-direction: column;
+//             align-items: center;
+//             justify-content: space-between;
+//             height: 40px;
+//             .line-1, .line-2, .line-3 {
+//                 height:3px;
+//                 width:50px;
+//                 background-color: #111;
+//             }
+//             .line-2 {
+//                 width: 35px;
+//             }
+//         }
+//     }
+// }
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background-color: #1144aa;
+  .logo {
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 3em;
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+    font-size: 1.3em;
+    list-style: none;
+    li a {
+      text-decoration: none;
+      color: whitesmoke;
     }
+  }
+  .hamburger {
+    display: none;
+  }
+}
+@media screen and (max-width: 1024px) {
+  nav {
     ul {
-        display: flex;
-        width: 50%;
-        list-style-type: none;
-        font-size: 2em;
-        justify-content: space-around;
-        li {
-            background-color: springgreen;
-            justify-content: center;
-            a{
-            }
-        }
+      width: 50%;
     }
-    .hamburger {
-        display: none;
-    }
+  }
 }
 
-@media screen and (max-width:768px) {
-    nav {
-        ul{
-            display:none;
-        }
-        .logo {
-            font-size: 3em;
-        }
-        .hamburger {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-between;
-            height: 45px;
-            .line-1, .line-2, .line-3 {
-                height:5px;
-                width:50px;
-                background-color: #111;
-            }
-            .line-2 {
-                width: 30px;
-            }
-        }
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  nav {
+    ul {
+      position: absolute;
+      right: 0px;
+      width: 80%;
+      top: 8vh;
+      height: 92vh;
+      background-color: #1144aa;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transform: translateX(100%);
+
+      li {
+        opacity: 0;
+      }
     }
+    .logo {
+      font-size: 2em;
+    }
+    .hamburger {
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      height: 1.5em;
+      .line-1,
+      .line-2,
+      .line-3 {
+        height: 3px;
+        width: 2em;
+        background-color: #111;
+      }
+      .line-2 {
+        width:1.3em;
+      }
+    }
+  }
 }
