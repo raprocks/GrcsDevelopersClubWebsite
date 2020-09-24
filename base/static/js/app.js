@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-const navSlide = () => {
-    const burger = document.querySelector('.hamburger');
-    const nav = document.querySelector('.nav-links');
-    burger.addEventListener('click', () => {
-        nav.classList.toggle('nav-action');
-    });
-}
-
-navSlide();
-=======
 function navSlide() {
     const burger = document.querySelector(".hamburger");
     const nav = document.querySelector(".nav-links");
@@ -27,4 +16,3 @@ function navSlide() {
     });
 }
 navSlide();
->>>>>>> aab5b3f35d18b608bdd6eb927b28a07283c93946

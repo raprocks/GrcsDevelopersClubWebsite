@@ -102,12 +102,8 @@
     background-color:#666;
   }
   nav {
-<<<<<<< HEAD
-    .nav-links {
-=======
       max-width: 100vw;
     ul {
->>>>>>> aab5b3f35d18b608bdd6eb927b28a07283c93946
       position: absolute;
       right: 0px;
       width: 80%;
@@ -118,14 +114,6 @@
       flex-direction: column;
       align-items: center;
       transform: translateX(100%);
-<<<<<<< HEAD
-      transition: transform 0.5s ease-in;
-
-      li {
-        opacity: 0;
-      }
-=======
->>>>>>> aab5b3f35d18b608bdd6eb927b28a07283c93946
     }
     .logo {
       font-size: 2em;
