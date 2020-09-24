@@ -1,74 +1,184 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
   background-color: #fff;
 }
 
-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
+/* nav {
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-around;
+  align-items: center;
   min-height: 8vh;
   background-color: #1144aa;
+  .logo {
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 3em;
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+    font-size: 1.3em;
+    list-style: none;
+    li a {
+      text-decoration: none;
+      color: whitesmoke;
+    }
+  }
+  .hamburger {
+    display: none;
+  }
+}
+@media (max-width: 1024px) {
+  nav {
+    ul {
+      width: 50%;
+    }
+  }
 }
 
-nav .logo {
-  color: white;
-  text-transform: uppercase;
-  letter-spacing: 5px;
-  font-size: 3em;
+@media (max-width: 768px) {
+  body {
+    overflow-x: visible;
+    background-color:#666;
+  }
+  nav {
+      max-width: 100vw;
+    ul {
+      position: absolute;
+      right: 0px;
+      width: 80%;
+      top: 8vh;
+      height: 92vh;
+      background-color: #1144aa;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transform: translateX(100%);
+    }
+    .logo {
+      font-size: 2em;
+    }
+    .hamburger {
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      height: 1.5em;
+      .line-1,
+      .line-2,
+      .line-3 {
+        height: 3px;
+        width: 2em;
+        background-color: #111;
+      }
+      .line-2 {
+        width:1.3em;
+      }
+    }
+  }
+} */
+/*
+
+<nav>
+    <span class="logo">DevClub</span>
+    <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Discussions</a></li>
+        <li><a href="#">Blog</a></li>
+    </ul>
+    <div class="hamburger">
+        <div class="line-1"></div>
+        <div class="line-2"></div>
+        <div class="line-3"></div>
+    </div>
+</nav>
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-nav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
+body {
+  min-height: 100vh;
+}
+
+nav {
+  padding-right: 1em;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  width: 40%;
-  font-size: 1.3em;
-  list-style: none;
+  min-height: 8vh;
+  justify-content: space-between;
+  align-items: center;
+  background-color: wheat;
 }
-
+nav .logo {
+  font-size: 3em;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+nav ul {
+  display: none;
+  list-style-type: none;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  height: 80%;
+}
 nav ul li a {
+  font-size: 2em;
   text-decoration: none;
-  color: whitesmoke;
+  color: black;
 }
-
 nav .hamburger {
   display: none;
+  height: 1.5em;
+  width: 2.5em;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
-
-@media screen and (max-width: 1024px) {
-  nav ul {
-    width: 50%;
-  }
+nav .hamburger .line-1, nav .hamburger .line-2, nav .hamburger .line-3 {
+  transition: all 0.8s ease-in;
+  background-color: black;
+  height: 0.1em;
+  width: 2.5em;
+}
+nav .hamburger .line-2 {
+  width: 2em;
 }
 
 @media screen and (max-width: 768px) {
   body {
     overflow-x: hidden;
   }
+<<<<<<< HEAD
   nav .nav-links {
     position: absolute;
+=======
+
+  nav .logo {
+    font-size: 2em;
+  }
+  nav ul {
+    position: fixed;
+>>>>>>> aab5b3f35d18b608bdd6eb927b28a07283c93946
     right: 0px;
-    width: 80%;
+    height: 90vh;
     top: 8vh;
-    height: 92vh;
-    background-color: #1144aa;
-    display: -webkit-box;
-    display: -ms-flexbox;
+    width: 80%;
+    background-color: #2277ff;
     display: flex;
+<<<<<<< HEAD
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -82,40 +192,36 @@ nav .hamburger {
     transition: -webkit-transform 0.5s ease-in;
     transition: transform 0.5s ease-in;
     transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
+=======
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+>>>>>>> aab5b3f35d18b608bdd6eb927b28a07283c93946
   }
   nav .nav-links li {
     opacity: 0;
   }
-  nav .logo {
-    font-size: 2em;
+  nav ul li a {
+    color: black;
   }
   nav .hamburger {
-    cursor: pointer;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    height: 1.5em;
   }
-  nav .hamburger .line-1,
-  nav .hamburger .line-2,
-  nav .hamburger .line-3 {
-    height: 3px;
-    width: 2em;
-    background-color: #111;
+}
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
   }
-  nav .hamburger .line-2 {
-    width: 1.3em;
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
+}
+.nav-active {
+  transform: translateX(0%);
 }
 
 .nav-action {
@@ -129,11 +235,9 @@ nav .hamburger {
   padding-top: 4em;
   padding-left: 2em;
 }
-
 .banner .main {
   font-size: 5em;
 }
-
 .banner .tagline {
   font-size: 130%;
   font-style: oblique;
@@ -141,3 +245,5 @@ nav .hamburger {
   display: block;
   height: 3em;
 }
+
+/*# sourceMappingURL=style.css.map */
