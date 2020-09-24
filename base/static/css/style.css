@@ -59,7 +59,7 @@ nav .hamburger {
   body {
     overflow-x: hidden;
   }
-  nav ul {
+  nav .nav-links {
     position: absolute;
     right: 0px;
     width: 80%;
@@ -78,8 +78,12 @@ nav .hamburger {
             align-items: center;
     -webkit-transform: translateX(100%);
             transform: translateX(100%);
+    -webkit-transition: -webkit-transform 0.5s ease-in;
+    transition: -webkit-transform 0.5s ease-in;
+    transition: transform 0.5s ease-in;
+    transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
   }
-  nav ul li {
+  nav .nav-links li {
     opacity: 0;
   }
   nav .logo {
@@ -112,6 +116,11 @@ nav .hamburger {
   nav .hamburger .line-2 {
     width: 1.3em;
   }
+}
+
+.nav-action {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
 }
 
 .banner {
